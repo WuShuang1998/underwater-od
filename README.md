@@ -15,11 +15,11 @@ python tools/train.py configs/cascade_rcnn_dconv_c3-c5_r101_fpn_ms800_2000.py --
 
 ## 预测
 ```
-python tools/test.py configs/cascade_rcnn_dcn_x101_64x4d_fpn_1x.py work_dirs/cas_dcn_x101_64x4d_fpn_htc_1x/epoch_4939A.pth --format_only
+python tools/test.py configs/cascade_rcnn_dcn_x101_64x4d_fpn_1x.py work_dirs/cas_dcn_x101_64x4d_fpn_htc_1x/epoch_4939A.pth --format_only --json_out results_x101.json
 
-python tools/test.py configs/cascade_rcnn_dconv_c3-c5_r101_fpn_1x.py  work_dirs/cascade_rcnn_dconv_c3-c5_r101_fpn_1x/epoch_4935A.pth --eval bbox
+python tools/test.py configs/cascade_rcnn_dconv_c3-c5_r101_fpn_1x.py  work_dirs/cascade_rcnn_dconv_c3-c5_r101_fpn_1x/epoch_4935A.pth --format_only --json_out results_r101.json
 
-python tools/test.py configs/cascade_rcnn_dconv_c3-c5_r50_fpn_ms800_2000.py  work_dirs/cascade_rcnn_dconv_c3-c5_r50_fpn_ms800_2000/epoch_12.pth --eval bbox
+python tools/test.py configs/cascade_rcnn_dconv_c3-c5_r50_fpn_ms800_2000.py  work_dirs/cascade_rcnn_dconv_c3-c5_r50_fpn_ms800_2000/epoch_12.pth --format_only --json_out results_r101_nonlocal.json
 ```
 
 **融合:**
